@@ -1,0 +1,8 @@
+CREATE PROCEDURE habitatArea()
+BEGIN
+	/* Write your SQL here. Terminate each statement with a semicolon. */
+    
+    SELECT ST_Area(ST_PolyFromText( ST_asText( ST_ConvexHull(ST_Collect( Point( x, y )))  ) ) )      AS area FROM places;
+    
+    
+END

@@ -1,0 +1,6 @@
+CREATE PROCEDURE orderOfSuccession()
+BEGIN
+	/* Write your SQL here. Terminate each statement with a semicolon. */
+    
+    SELECT CONCAT( IF(gender='m', 'King', 'Queen'), " ", name) AS name FROM Successors ORDER BY birthday ASC;
+END

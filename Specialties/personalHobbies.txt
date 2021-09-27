@@ -1,0 +1,6 @@
+//https://dev.mysql.com/doc/refman/8.0/en/set.html
+
+CREATE PROCEDURE personalHobbies()
+BEGIN
+	SELECT name FROM people_hobbies WHERE hobbies LIKE '%sports%' AND hobbies LIKE '%reading%';
+END

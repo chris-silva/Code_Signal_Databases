@@ -1,0 +1,8 @@
+#How to Write a Multiplication Aggregate Function in SQL
+# MULTIPLY(x) = EXP(SUM(LN(x)))
+
+CREATE PROCEDURE combinationLock()
+BEGIN
+	SELECT ROUND( EXP(SUM(LN( CHAR_LENGTH(characters) ))) ) AS combinations
+    FROM discs;
+END

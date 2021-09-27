@@ -1,0 +1,6 @@
+CREATE PROCEDURE nullIntern()
+BEGIN
+	SELECT SUM(TRIM(description)  IN('-', 'nil', 'NULL') OR description IS NUll )
+	AS number_of_nulls FROM departments 
+    ; 
+END
